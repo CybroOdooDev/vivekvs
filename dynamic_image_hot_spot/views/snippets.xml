@@ -1,0 +1,32 @@
+<odoo>
+    <template id="mars_banner"
+              inherit_id="web_editor.snippet_options"
+              name="mars portfolio Banner">
+        <xpath expr="//we-button[@data-name='image_transform_opt']" position="after">
+            <div data-selector="img" data-exclude="[data-oe-type='image'] > img, [data-oe-xpath]"
+                 class="o_we_image_options">
+
+                <we-select string="Image Hotspot" data-state-to-first-class="true">
+                    <we-button data-select-class="" title="Off">Off</we-button>
+                    <we-button data-select-class="on" title="On">On</we-button>
+                </we-select>
+<!--                <t t-set="Horizontal_move_label">Move Horizontally</t>-->
+<!--                <we-range t-att-string="horizontal_move_label" t-att-class="indent and 'o_we_sublevel_2'" />-->
+
+<!--                <t t-set="Vertical_move_label">Move Vertically</t>-->
+<!--                <we-range t-att-string="vertical_move_label" t-att-class="indent and 'o_we_sublevel_2'" />-->
+                <t t-esc="props"/>
+                <t t-set="move_horizon_label">Move Horizontal</t>
+                <we-range t-att-string="move_horizon_label"
+                          t-att-class="indent and 'o_we_sublevel_2'"
+                          />
+
+                <t t-set="move_vertical_label">Move Vertical</t>
+                <we-range t-att-string="move_vertical_label"
+                          t-att-class="indent and 'o_we_sublevel_2'"
+                          />
+            </div>
+
+        </xpath>
+    </template>
+</odoo>
